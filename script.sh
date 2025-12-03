@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create output directory
-OUTPUT_DIR="./src/static/collected-readmes"
+OUTPUT_DIR="collected-readmes"
 mkdir -p "$OUTPUT_DIR"
 
 # Function to check if path should be ignored
