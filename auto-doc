@@ -68,7 +68,7 @@ echo "✅ Viewer setup complete"
 # Step 6: Move files and commit
 echo ""
 echo "💾 Step 6: Committing documentation..."
-mv collected-readmes/ doc-viewer/src/static/
+mv collected-readmes/ doc-viewer/src/static/collected-readmes
 mv ./nav.json doc-viewer/
 
 # Add all generated files
@@ -107,3 +107,7 @@ echo "  1. Review changes: git status"
 echo "  2. Push to remote: git push origin project/doc"
 echo "  3. View docs: cd doc-viewer && npm install && npm start"
 echo ""
+
+echo "starting application"
+cd doc-viewer
+pnpm i && pnpm run dev
