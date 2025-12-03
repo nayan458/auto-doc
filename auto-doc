@@ -68,6 +68,7 @@ echo "✅ Viewer setup complete"
 # Step 6: Move files and commit
 echo ""
 echo "💾 Step 6: Committing documentation..."
+mkdir doc-viewer/src/static/collected-readmes/
 mv collected-readmes/ doc-viewer/src/static/collected-readmes/
 mv ./nav.json doc-viewer/
 
