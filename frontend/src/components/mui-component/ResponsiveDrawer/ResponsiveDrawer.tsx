@@ -48,7 +48,7 @@ export default function ResponsiveDrawer() {
       if (navPath.startsWith("@readmes")) {
         const rel = navPath.replace(/^@readmes\/?/, "");
         // produced URL (dev server can serve /src/...), adjust if you put files in public
-        setFilePath(`/src/static/collected-readmes/${rel}`);
+        setFilePath(`/src/collected-readmes/${rel}`);
       } else {
         setFilePath(navPath);
       }
@@ -115,7 +115,7 @@ export const fetchReadmeFromStatic = async (path: string): Promise<string> => {
     let fetchPath = path;
     if (path.startsWith("@readmes")) {
       const rel = path.replace(/^@readmes\/?/, "");
-      fetchPath = `/src/static/collected-readmes/${rel}`;
+      fetchPath = `/src/collected-readmes/${rel}`;
     }
     // Ensure leading slash
     if (!fetchPath.startsWith("/")) fetchPath = `/${fetchPath}`;
