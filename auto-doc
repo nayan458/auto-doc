@@ -108,7 +108,7 @@ echo "  2. Push to remote: git push origin project/doc"
 echo "  3. View docs: cd doc-viewer && npm install && npm start"
 echo ""
 
-# echo "starting application"
-# cd doc-viewer
-# pnpm i
-# pnpm run dev
+echo "starting application"
+cd doc-viewer
+pnpm i
+pnpm run dev
