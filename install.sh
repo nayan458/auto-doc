@@ -3,27 +3,27 @@
 set -e
 
 INSTALL_DIR="$HOME/.local/bin"
-REPO_URL="https://github.com/YOUR_USERNAME/git-autodoc.git"
+REPO_URL="https://github.com/nayan458/auto-doc.git"
 
-echo "📦 Installing git-autodoc..."
+echo "📦 Installing auto-doc..."
 echo ""
 
 # Create install directory if it doesn't exist
 mkdir -p "$INSTALL_DIR"
 
 # Clone or update repository
-if [ -d "$HOME/.git-autodoc" ]; then
+if [ -d "$HOME/.auto-doc" ]; then
     echo "Updating existing installation..."
-    cd "$HOME/.git-autodoc"
+    cd "$HOME/.auto-doc"
     git pull
 else
-    echo "Installing git-autodoc..."
-    git clone "$REPO_URL" "$HOME/.git-autodoc"
+    echo "Installing auto-doc..."
+    git clone "$REPO_URL" "$HOME/.auto-doc"
 fi
 
 # Link the command
-ln -sf "$HOME/.git-autodoc/git-autodoc" "$INSTALL_DIR/git-autodoc"
-chmod +x "$INSTALL_DIR/git-autodoc"
+ln -sf "$HOME/.auto-doc/auto-doc" "$INSTALL_DIR/auto-doc"
+chmod +x "$INSTALL_DIR/auto-doc"
 
 # Check if directory is in PATH
 if [[ ":$PATH:" != *":$INSTALL_DIR:"* ]]; then
