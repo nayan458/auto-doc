@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create output directory
-OUTPUT_DIR="collected-readmes"
+OUTPUT_DIR="doc-viewer/src/static/collected-readmes"
 mkdir -p "$OUTPUT_DIR"
 
 # Function to check if path should be ignored
@@ -50,12 +50,12 @@ find . -type f -iname "README.md" | while read -r file; do
     echo "Copied: $file"
 done
 
-# Generate nav.json
+# Generate doc-viewer/nav.json
 echo ""
 echo "Generating navigation JSON..."
 
 # Start JSON structure
-echo "{" > nav.json
+echo "{" > doc-viewer/nav.json
 
 # Find all README files and build JSON
 first=true
@@ -77,21 +77,21 @@ find "$OUTPUT_DIR" -type f -iname "README.md" | sort | while read -r file; do
     if [[ "$first" == true ]]; then
         first=false
     else
-        echo "," >> nav.json
+        echo "," >> doc-viewer/nav.json
     fi
     
     # Add JSON entry with @readmes/ prefix
-    echo -n "  \"$folder_name\": \"@readmes/$rel_path\"" >> nav.json
+    echo -n "  \"$folder_name\": \"@readmes/$rel_path\"" >> doc-viewer/nav.json
 done
 
 # Close JSON structure
-echo "" >> nav.json
-echo "}" >> nav.json
+echo "" >> doc-viewer/nav.json
+echo "}" >> doc-viewer/nav.json
 
 echo ""
 echo "✓ Collection complete!"
 echo "  - README files copied to: $OUTPUT_DIR/"
-echo "  - Navigation JSON saved to: nav.json"
+echo "  - Navigation JSON saved to: doc-viewer/nav.json"
 echo ""
 echo "Example .readmeIgnore format:"
 echo "  node_modules"
