@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname,'./src'),
-      "@readmes" : path.resolve(__dirname,'./src/static/collected-readmes')
+      "@readmes" : path.resolve(__dirname,'./src/collected-readmes')
     },
   },
 })
