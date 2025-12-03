@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide shows how to generate documentation for any git repository.
+This guide shows how to generate documentation for any git repository using the README files.
 
 ## Configuration
 
@@ -111,4 +111,3 @@ build
 ## License
 
 MIT
-````
