@@ -48,7 +48,7 @@ echo ""
 echo "🔍 Step 4: Collecting README files..."
 ./script.sh
 
-if [ ! -d "doc-viewer/src/static/collected-readmes" ] || [ ! -f "doc-viewer/nav.json" ]; then
+if [ ! -d "collected-readmes" ] || [ ! -f "nav.json" ]; then
     echo "❌ Error: Script failed to generate required files"
     exit 1
 fi
