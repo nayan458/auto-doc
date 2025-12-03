@@ -48,10 +48,10 @@ echo ""
 echo "🔍 Step 4: Collecting README files..."
 ./script.sh
 
-# if [ ! -d "collected-readmes" ] || [ ! -f "nav.json" ]; then
-#     echo "❌ Error: Script failed to generate required files"
-#     exit 1
-# fi
+if [ ! -d "collected-readmes" ] || [ ! -f "nav.json" ]; then
+    echo "❌ Error: Script failed to generate required files"
+    exit 1
+fi
 echo "✅ Documentation collected"
 
 # Step 5: Copy frontend files
