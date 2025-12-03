@@ -41,6 +41,7 @@ echo ""
 echo "📋 Step 3: Setting up documentation scripts..."
 cp "$TEMP_DIR/script.sh" ./
 chmod +x ./script.sh
+chmod +x ./cleanup.sh
 echo "✅ Scripts ready"
 
 # Step 4: Run the script
